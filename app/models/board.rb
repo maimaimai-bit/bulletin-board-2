@@ -9,4 +9,7 @@
 #
 class Board < ApplicationRecord
   validates(:name, presence: true, uniqueness: true)
+  
+  # Add association to user
+  belongs_to :user, optional: true
 end

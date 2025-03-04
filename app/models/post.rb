@@ -14,4 +14,8 @@ class Post < ApplicationRecord
   validates(:title, presence: true)
   validates(:body, presence: true)
   validates(:expires_on, presence: true)
+  
+  # Add association to user
+  belongs_to :user, optional: true
+  belongs_to :board
 end
